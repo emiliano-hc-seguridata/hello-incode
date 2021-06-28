@@ -14,7 +14,7 @@ helloSdk.renderLogin(document.getElementById('root'), {
 
   onSuccess: r => {
     console.log('onSuccess', r)
-    document.getElementById('success').innerHTML = `Welcome Back, your token is ${r.token}`
+    document.getElementById('root').innerHTML = `Welcome Back, your token is ${r.token}`
   },
   onError: r => {
     console.log('on error', r)
