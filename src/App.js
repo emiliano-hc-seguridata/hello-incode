@@ -5,17 +5,28 @@ const apiURL = "https://demo-api.incodesmile.com/";
 const apiKey = "570c70d1693636fdc200713415ebc3973afbdf19";
 
 
-const helloSdk = Hello.create({
+const helloSdk = window.Hello.create({
   apiKey: apiKey,
   apiURL: apiURL,
 });
+
+helloSdk.renderLogin(document.getElementById('root'), {
+
+  onSuccess: r => {
+    console.log('onSuccess', r)
+    document.getElementById('success').innerHTML = `Welcome Back, your token is ${r.token}`
+  },
+  onError: r => {
+    console.log('on error', r)
+  },
+})
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p id='success'>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
