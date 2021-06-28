@@ -1,6 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+const apiURL = "https://demo-api.incodesmile.com/";
+const apiKey = "570c70d1693636fdc200713415ebc3973afbdf19";
+
+
+const helloSdk = Hello.create({
+  apiKey: apiKey,
+  apiURL: apiURL,
+});
+
 function App() {
   return (
     <div className="App">
