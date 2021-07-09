@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { Component } from 'react';
+import React from 'react';
 
 
 var apiURL = "https://demo-api.incodesmile.com/";
@@ -12,10 +12,6 @@ const helloSdk = window.Hello.create({
 });
 
 class App extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   renderLogin() {
 
